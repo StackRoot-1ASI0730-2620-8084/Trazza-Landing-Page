@@ -1,20 +1,30 @@
 // Shared script for index.html, login.html and registro.html.
 // Every block checks that its elements exist, so it never breaks on pages that don't have them.
 document.addEventListener('DOMContentLoaded', () => {
-    const NAV_BREAKPOINT = 1100; // must match the @media (max-width: 1100px) in style.css
+    const NAV_BREAKPOINT = 1240; // must match the @media (max-width: 1240px) in style.css
 
     /* ---------- Mobile menu ---------- */
     const burger = document.querySelector('.burger-menu');
     const navMenu = document.querySelector('.nav-menu');
 
     if (burger && navMenu) {
+        // Texts come from i18n.js (EN | ES); English fallback if it isn't loaded
+        const t = (key, fallback) => (window.TrazzaI18n ? window.TrazzaI18n.t(key) : fallback);
+        const updateBurgerLabel = () => {
+            const open = navMenu.classList.contains('is-open');
+            burger.setAttribute('aria-label', open ? t('menu.close', 'Close menu') : t('menu.open', 'Open menu'));
+        };
+
         const setMenu = (open) => {
             navMenu.classList.toggle('is-open', open);
             burger.classList.toggle('is-open', open);
             burger.setAttribute('aria-expanded', String(open));
-            burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
             document.body.classList.toggle('menu-open', open);
+            updateBurgerLabel();
         };
+
+        document.addEventListener('trazza:langchange', updateBurgerLabel);
+        updateBurgerLabel();
 
         burger.addEventListener('click', () => setMenu(!navMenu.classList.contains('is-open')));
         navMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
@@ -62,20 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn-emprendedor')?.click();
     }
 
-    /* ---------- Language switch (EN | ES) ---------- */
-    // Visual state only for now; every switch on the page stays in sync.
-    const langOptions = document.querySelectorAll('.lang-switch [data-lang]');
-    langOptions.forEach((option) => {
-        option.addEventListener('click', () => {
-            const lang = option.dataset.lang;
-            document.documentElement.lang = lang;
-            langOptions.forEach((o) => {
-                const on = o.dataset.lang === lang;
-                o.classList.toggle('is-active', on);
-                o.setAttribute('aria-pressed', String(on));
-            });
-        });
-    });
+    /* Language switch (EN | ES): handled in scripts/i18n.js */
 
     /* ---------- Testimonials slider (mobile) ---------- */
     const slider = document.querySelector('[data-slider]');

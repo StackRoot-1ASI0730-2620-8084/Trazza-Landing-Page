@@ -346,8 +346,8 @@ footer[id] {
     gap: 12px;
 }
 .nav-signin {
-    width: 96px;
-    padding: 0;
+    min-width: 96px;
+    padding: 0 16px;
 }
 .burger-menu {
     display: none;
@@ -1029,7 +1029,7 @@ footer[id] {
 }
 .footer-grid {
     display: grid;
-    grid-template-columns: 420px 230px 230px 1fr auto;
+    grid-template-columns: minmax(0, 420px) minmax(0, 230px) minmax(0, 230px) 1fr auto;
 }
 .footer-brand p {
     margin-top: 18px;
@@ -1084,6 +1084,11 @@ footer[id] {
     border: 1px solid var(--border-color);
     background-color: var(--white);
     box-shadow: var(--shadow-card);
+}
+.auth-lang {
+    display: flex;
+    justify-content: flex-end;
+    margin: -16px -16px 4px 0;
 }
 .auth-header {
     text-align: center;
@@ -1187,8 +1192,13 @@ footer[id] {
    Responsive
    ========================================================= */
 
+/* Spanish labels are longer: tighter nav spacing only when the page is in ES */
+.nav-links a { white-space: nowrap; }
+html[lang="es"] .nav-menu { margin-left: 40px; }
+html[lang="es"] .nav-links { gap: 22px; }
+
 /* Navigation collapses before the links start to crowd */
-@media (max-width: 1100px) {
+@media (max-width: 1240px) {
     .container { padding: 0 40px; }
 
     .nav-tools { margin-left: auto; }
