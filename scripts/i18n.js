@@ -68,8 +68,7 @@
         /* ---- For Carriers ---- */
         'carriers.eyebrow': 'PARA TRANSPORTISTAS',
         'carriers.title': 'Deja de regresar vacío',
-        'carriers.photo': 'Foto: transportista revisando sugerencias de carga en su celular',
-        'photo.short': 'Foto',
+        'carriers.photo': 'Transportista revisando sugerencias de carga en su celular',
         'carriers.f1.title': 'Cargas en tu camino de regreso',
         'carriers.f1.text': 'Solo cargas que encajan con tu ruta y la capacidad de tu vehículo.',
         'carriers.f2.title': 'Conoce tu desvío antes',
@@ -81,7 +80,7 @@
         /* ---- For Merchants ---- */
         'merchants.eyebrow': 'PARA COMERCIANTES',
         'merchants.title': 'Envía tu mercadería sin<br> un contrato fijo',
-        'merchants.photo': 'Foto: dueño de una pyme preparando un envío',
+        'merchants.photo': 'Dueño de una pyme preparando un envío',
         'merchants.f1.title': 'Transportistas con espacio en tu ruta',
         'merchants.f1.text': 'Encuentra transportistas que ya van hacia tu destino, a menor costo que un viaje exclusivo.',
         'merchants.f2.title': 'Seguimiento del envío en vivo',
