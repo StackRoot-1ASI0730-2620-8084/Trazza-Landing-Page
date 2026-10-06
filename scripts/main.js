@@ -1,14 +1,13 @@
-// Shared script for index.html, login.html and registro.html.
-// Every block checks that its elements exist, so it never breaks on pages that don't have them.
-document.addEventListener('DOMContentLoaded', () => {
-    const NAV_BREAKPOINT = 1240; // must match the @media (max-width: 1240px) in style.css
 
-    /* ---------- Mobile menu ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const NAV_BREAKPOINT = 1240;
+
+    
     const burger = document.querySelector('.burger-menu');
     const navMenu = document.querySelector('.nav-menu');
 
     if (burger && navMenu) {
-        // Texts come from i18n.js (EN | ES); English fallback if it isn't loaded
+        
         const t = (key, fallback) => (window.TrazzaI18n ? window.TrazzaI18n.t(key) : fallback);
         const updateBurgerLabel = () => {
             const open = navMenu.classList.contains('is-open');
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---------- "How it works" switch (For Carriers / For Merchants) ---------- */
+    
     document.querySelectorAll('[data-segmented]').forEach((group) => {
         const buttons = group.querySelectorAll('[data-panel]');
         const panels = document.querySelectorAll(`[data-panel-group="${group.dataset.segmented}"]`);
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ---------- Role toggle (login / registro) ---------- */
+   
     document.querySelectorAll('.toggle-container').forEach((container) => {
         const buttons = container.querySelectorAll('.toggle-btn');
         buttons.forEach((button) => {
@@ -66,15 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // registro.html?role=merchant → preselect "Merchant"
+    
     const role = new URLSearchParams(window.location.search).get('role');
     if (role === 'merchant') {
         document.getElementById('btn-emprendedor')?.click();
     }
 
-    /* Language switch (EN | ES): handled in scripts/i18n.js */
-
-    /* ---------- Testimonials slider (mobile) ---------- */
+    
     const slider = document.querySelector('[data-slider]');
     const dots = document.querySelectorAll('[data-slider-dot]');
 
@@ -92,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---------- Product video ---------- */
-    // Add data-video-src="https://www.youtube.com/embed/VIDEO_ID" to .video-box to enable it.
+    
     const videoBox = document.querySelector('.video-box');
     if (videoBox) {
         videoBox.addEventListener('click', () => {
