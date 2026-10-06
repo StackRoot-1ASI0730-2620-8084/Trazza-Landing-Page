@@ -1,20 +1,13 @@
-// Trazza – EN | ES language switch
-// English is written directly in the HTML (default). This file holds the Spanish texts.
-//
-// How to mark an element in the HTML:
-//   data-i18n="key"                    → replaces the text
-//   data-i18n-html="key"               → replaces inner HTML (for texts with <span>, <br>…)
-//   data-i18n-attr="placeholder:key"   → replaces attributes (several: "aria-label:a;content:b")
 (function () {
     const STORAGE_KEY = 'trazza-lang';
     const SUPPORTED = ['en', 'es'];
 
     const es = {
-        /* ---- Meta ---- */
+        
         'meta.title': 'Trazza – Fletes de retorno para Lima',
         'meta.description': 'Trazza conecta a transportistas que regresan con espacio libre con pequeñas y medianas empresas que necesitan enviar mercadería por Lima.',
 
-        /* ---- Header ---- */
+        
         'logo.home': 'Inicio de Trazza',
         'nav.how': 'Cómo funciona',
         'nav.carriers': 'Para transportistas',
@@ -27,7 +20,7 @@
         'menu.open': 'Abrir menú',
         'menu.close': 'Cerrar menú',
 
-        /* ---- Hero ---- */
+        
         'hero.tag': 'FLETES DE RETORNO PARA LIMA',
         'hero.title': '¿Tu camión<br> regresa <span>vacío?</span>',
         'hero.desc': 'Trazza conecta a transportistas que regresan con espacio libre con pequeñas y medianas empresas que necesitan enviar mercadería por Lima. <span class="desktop-only">Publica tu ruta de retorno, recibe cargas compatibles y sigue cada envío en tiempo real.</span>',
@@ -37,7 +30,7 @@
         'trust.dni': 'Transportistas verificados con DNI',
         'trust.tracking': 'Seguimiento en vivo',
 
-        /* ---- Hero card ---- */
+        
         'card.aria': 'Ejemplo de una sugerencia de carga',
         'card.title': 'Sugerencia de carga para tu retorno',
         'card.new': 'Nuevo',
@@ -46,7 +39,7 @@
         'card.detour': 'Desvío +1.8 km (+12 min)',
         'card.view': 'Ver carga',
 
-        /* ---- How it works ---- */
+    
         'how.eyebrow': 'CÓMO FUNCIONA',
         'how.title': 'Cómo funciona Trazza',
         'how.profile': 'Elige tu perfil',
@@ -65,7 +58,7 @@
         'how.m3.title': 'Sigue y califica',
         'how.m3.text': 'Sigue tu mercadería en vivo y califica al transportista cuando se confirme la entrega.',
 
-        /* ---- For Carriers ---- */
+        
         'carriers.eyebrow': 'PARA TRANSPORTISTAS',
         'carriers.title': 'Deja de regresar vacío',
         'carriers.photo': 'Transportista revisando sugerencias de carga en su celular',
@@ -77,7 +70,7 @@
         'carriers.f3.text': 'Perfiles de empresas verificados y calificaciones de otros transportistas.',
         'carriers.cta': 'Regístrate como transportista',
 
-        /* ---- For Merchants ---- */
+        
         'merchants.eyebrow': 'PARA COMERCIANTES',
         'merchants.title': 'Envía tu mercadería sin<br> un contrato fijo',
         'merchants.photo': 'Dueño de una pyme preparando un envío',
@@ -89,7 +82,7 @@
         'merchants.f3.text': 'Transportistas con identidad verificada (DNI) y calificaciones de otros comerciantes.',
         'merchants.cta': 'Regístrate como comerciante',
 
-        /* ---- Comparison ---- */
+        
         'compare.eyebrow': 'COMPARACIÓN',
         'compare.title': '¿Por qué Trazza?',
         'compare.criteria': 'Criterio',
@@ -120,7 +113,7 @@
         'compare.m4.trazza': 'Trazza: En vivo, con alertas de desvío',
         'compare.m4.others': 'Otros: Preguntando por teléfono',
 
-        /* ---- Plans ---- */
+        
         'plans.eyebrow': 'PLANES',
         'plans.title': 'Planes simples, sin comisión por viaje',
         'plans.sub': 'Trazza nunca cobra un porcentaje de tu flete. Elige el plan que mejor se adapte a ti.',
@@ -139,7 +132,7 @@
         'plans.pro.f4': 'Reportes mensuales de viajes',
         'plans.pro.cta': 'Pasar a Pro',
 
-        /* ---- Testimonials ---- */
+        
         'testimonials.eyebrow': 'TESTIMONIOS',
         'testimonials.title': 'Lo que dicen nuestros usuarios',
         'testimonials.stars': '5 de 5 estrellas',
@@ -150,17 +143,17 @@
         'testimonials.n2': '[Nombre del comerciante]',
         'testimonials.r2': 'Comerciante · [Tipo de negocio]',
 
-        /* ---- Video ---- */
+        
         'video.eyebrow': 'SOBRE EL PRODUCTO',
         'video.title': 'Mira Trazza en acción',
         'video.play': 'Reproducir el video sobre el producto',
         'video.caption': 'Video sobre el producto · 2:30',
 
-        /* ---- Final CTA ---- */
+        
         'final.title': 'Llena tu viaje de retorno o envía tu mercadería hoy',
         'final.sub': 'Crea tu cuenta gratis en minutos.',
 
-        /* ---- Footer ---- */
+        
         'footer.desc': 'Fletes de retorno para Lima. Conectamos transportistas y pymes.',
         'footer.product': 'Producto',
         'footer.legal': 'Legal',
@@ -170,7 +163,7 @@
         'footer.contact': 'Contacto',
         'footer.copy': '&copy; 2026 StackRoot · Trazza<span class="desktop-only">. Todos los derechos reservados.</span>',
 
-        /* ---- Auth pages ---- */
+        
         'auth.back': 'Volver al inicio de Trazza',
         'auth.carrier': 'Transportista',
         'auth.merchant': 'Comerciante',
